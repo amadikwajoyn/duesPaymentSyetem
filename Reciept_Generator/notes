@@ -1,0 +1,20 @@
+<?php if(isset($error)){ echo $_POST['hourlyprice']; } ?>
+
+<?php if(isset($error)){ echo $_POST['hours']; } ?>
+
+<?php if(isset($error)){ echo $_POST['developer']; } ?>
+
+
+
+$pdf->Cell(40,10, $_POST['developer'], 2);
+$pdf->Cell(60,10, $_POST['address']);
+$pdf->Cell(80,10, $_POST['phone']);
+$pdf->Cell(100,10, 'Invoice');
+$pdf->Cell(100,20, 'Bill To:');
+
+
+
+$pdf->Cell(40,10, 'Bill To: Sherman Williams');
+$pdf->Cell(80,10,'Pay To: '. $_POST['developer'], 0,1,'C');
+$pdf->Cell(40,20, 'Phone Number: '. $_POST['phone'], 0,1,'L');
+$pdf->Cell(40,30,'Address '. $_POST['address'], 0,1,'L');

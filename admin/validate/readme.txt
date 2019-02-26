@@ -1,0 +1,1 @@
+This is an invoice generator, that uses PHP and a bit of JavaScript to make the calculation load without refresh. Upon completion of the calculation it then posts the variables and displays them as a PDF document. 
